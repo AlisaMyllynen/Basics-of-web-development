@@ -1,1 +1,135 @@
+/* Author: Alisa Myllynen */
 
+body {
+  margin: 0;
+  background-color: #e9e4d8;
+  color: #2e241d;
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+  line-height: 1.7;
+}
+
+/* Header: dark cabin wood with birch-gold title */
+header {
+  background-color: #3a2a20;
+  color: #f1e6d0;
+  text-align: center;
+  padding: 3rem 1rem 2.5rem;
+  border-bottom: 6px solid #d9a21b;
+}
+
+h1 {
+  margin: 0 0 0.5rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.8rem;
+  font-weight: normal;
+  letter-spacing: 1px;
+  color: #e8b83a;
+}
+
+header p {
+  margin: 0;
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+/* Navigation bar in maple red */
+nav {
+  background-color: #9c3f1c;
+  text-align: center;
+  padding: 0.7rem 0;
+}
+
+nav a {
+  color: #fbf1dc;
+  text-decoration: none;
+  margin: 0 1.2rem;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #e8b83a;
+  text-decoration: underline;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+section {
+  margin-bottom: 2.5rem;
+}
+
+h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: normal;
+  font-size: 1.7rem;
+  color: #9c3f1c;
+  border-bottom: 2px solid #c9b68f;
+  padding-bottom: 0.3rem;
+}
+
+/* Intro: portrait photo on the left, text on the right */
+.intro {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+figure {
+  margin: 0;
+  flex: 0 0 300px;
+  background-color: #fbf6ea;
+  padding: 0.7rem 0.7rem 0.5rem;
+  border: 1px solid #c9b68f;
+  box-shadow: 4px 4px 0 #c9b68f;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  font-style: italic;
+  text-align: center;
+  color: #5a4a3a;
+}
+
+.text {
+  flex: 1;
+}
+
+.text h2 {
+  margin-top: 0;
+}
+
+ul, ol {
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.4rem;
+}
+
+li::marker {
+  color: #d9a21b;
+  font-weight: bold;
+}
+
+footer {
+  background-color: #3a2a20;
+  color: #f1e6d0;
+  text-align: center;
+  padding: 1.2rem 1rem;
+  border-top: 6px solid #d9a21b;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
