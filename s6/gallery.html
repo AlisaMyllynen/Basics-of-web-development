@@ -1,0 +1,88 @@
+<!--
+    Centria Edu - Basics of Web Development
+
+    Original author: Ville Heikkiniemi
+    Modified by: Alisa Myllynen
+    Last modified: 2026-09-21
+
+    Based on the original course template.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ville Heikkiniemi">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <title>Centria Edu | Gallery</title>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    centria <span>edu</span>
+                </div>
+
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="index.html#topics">Topics</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="topics" id="gallery">
+            <div class="container">
+
+                <h2>Gallery</h2>
+
+                <div class="cards">
+
+                    <article class="card card-bg" style="background-image: url('images/street-sunset.jpg');">
+                        <h3>Evening street</h3>
+                        <p>
+                            A quiet street near my home, lit by the low evening sun, with long tree shadows on the road.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Old riverside building</h3>
+                        <p>
+                            A former industrial building beside the river, now home to a restaurant.
+                        </p>
+                        <img class="grayscale-image" src="images/riverside-building.jpg" alt="A red brick factory building beside a river with a small bridge">
+                    </article>
+
+                    <article class="card">
+                        <h3>Lake in summer</h3>
+                        <p>
+                            A calm lake at sunset, taken during a summer evening walk.
+                        </p>
+                        <a href="images/lake-shore.jpg" target="_blank">
+                            <img class="card-image" src="images/lake-shore.jpg" alt="A calm lake shore with reeds and the sun breaking through clouds">
+                        </a>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Centria Edu</p>
+        </div>
+    </footer>
+
+</body>
+</html>
