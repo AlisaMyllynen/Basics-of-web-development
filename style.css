@@ -1,0 +1,158 @@
+:root {
+  --bg: #f4f1fa;
+  --surface: #ffffff;
+  --text: #2b2638;
+  --muted: #6a6480;
+  --primary: #5b3fa8;
+  --accent: #e0527a;
+  --border: #ddd6ee;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+}
+
+/* Header */
+.site-header {
+  padding: 3rem 1.5rem;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(135deg, var(--primary), #8a5fd6);
+}
+
+.site-header h1 {
+  margin: 0.25rem 0 1rem;
+}
+
+.site-header p {
+  max-width: 40rem;
+  margin: 0 auto 1rem;
+}
+
+.site-header .eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+.site-header nav a {
+  display: inline-block;
+  margin: 0.25rem;
+  padding: 0.5rem 1rem;
+  color: var(--primary);
+  background: #fff;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.site-header nav a:hover,
+.site-header nav a:focus {
+  background: #ffe3ec;
+}
+
+/* Sections */
+main {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 2rem;
+}
+
+section {
+  margin-top: 2rem;
+}
+
+section h2 {
+  margin-bottom: 0.25rem;
+  color: var(--primary);
+}
+
+.section-intro {
+  margin-top: 0;
+  color: var(--muted);
+}
+
+/* Card grid: 3 columns -> 2 columns -> 1 column */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--accent);
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 6px rgba(43, 38, 56, 0.08);
+}
+
+.card h3 {
+  margin: 0.5rem 0;
+}
+
+.card p {
+  margin: 0 0 1rem;
+  color: var(--muted);
+}
+
+.tag {
+  align-self: flex-start;
+  padding: 0.1rem 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--accent);
+  border-radius: 999px;
+}
+
+/* Pushes the link to the bottom of the card */
+.card a {
+  margin-top: auto;
+  align-self: flex-start;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.card a:hover,
+.card a:focus {
+  color: var(--accent);
+}
+
+/* Footer */
+.site-footer {
+  padding: 1.5rem;
+  text-align: center;
+  color: #fff;
+  background: var(--text);
+}
+
+.site-footer p {
+  margin: 0.25rem 0;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 900px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
