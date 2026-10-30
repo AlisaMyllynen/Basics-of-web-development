@@ -1,5 +1,9 @@
 /* Author: Alisa Myllynen */
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   background-color: #e9e4d8;
@@ -20,7 +24,7 @@ header {
 h1 {
   margin: 0 0 0.5rem;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 2.8rem;
+  font-size: clamp(1.9rem, 6vw, 2.8rem);
   font-weight: normal;
   letter-spacing: 1px;
   color: #e8b83a;
@@ -36,15 +40,16 @@ header p {
 nav {
   background-color: #9c3f1c;
   text-align: center;
-  padding: 0.7rem 0;
+  padding: 0.5rem 0;
 }
 
 nav a {
+  display: inline-block;
   color: #fbf1dc;
   text-decoration: none;
-  margin: 0 1.2rem;
+  margin: 0.2rem 1rem;
+  padding: 0.2rem 0;
   font-weight: bold;
-  padding-bottom: 0.2rem;
 }
 
 nav a:hover {
@@ -58,7 +63,7 @@ nav a.current {
 }
 
 main {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 2rem 1.5rem;
 }
@@ -80,23 +85,9 @@ a {
   color: #9c3f1c;
 }
 
-/* Intro: portrait photo on the left, text on the right */
-.intro {
-  display: flex;
-  gap: 2rem;
-  align-items: flex-start;
-}
-
-.intro figure {
-  flex: 0 0 300px;
-}
-
-.text {
-  flex: 1;
-}
-
-.text h2 {
-  margin-top: 0;
+a:focus-visible {
+  outline: 3px solid #d9a21b;
+  outline-offset: 3px;
 }
 
 /* Photo frame, used on both pages */
@@ -111,6 +102,7 @@ figure {
 img {
   display: block;
   width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -122,15 +114,37 @@ figcaption {
   color: #5a4a3a;
 }
 
-/* Gallery: three photos side by side, cropped to the same size */
+/* Home page intro: photo on the left, text on the right */
+.intro {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.text h2 {
+  margin-top: 0;
+}
+
+/* Gallery: card grid that adds or removes columns by itself */
 .gallery {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.5rem;
   margin: 2rem 0;
 }
 
 .gallery figure {
-  flex: 1;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.gallery figure:hover {
+  transform: translateY(-4px);
+  box-shadow: 4px 8px 0 #c9b68f;
+}
+
+.gallery a {
+  display: block;
 }
 
 .gallery img {
@@ -162,4 +176,24 @@ footer {
 footer p {
   margin: 0;
   font-size: 0.9rem;
+}
+
+/* Narrow screens: home page stacks into one column */
+@media (max-width: 700px) {
+  .intro {
+    grid-template-columns: 1fr;
+  }
+
+  .intro figure {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  header {
+    padding: 2rem 1rem 1.5rem;
+  }
+
+  main {
+    padding: 1.5rem 1rem;
+  }
 }
