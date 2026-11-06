@@ -1,0 +1,80 @@
+<!-- Author: Alisa Myllynen -->
+<!-- Modified by: Alisa Myllynen -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register - Autumn Break at the Cottage</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico">
+</head>
+<body>
+  <header>
+    <h1>Autumn Break at the Cottage</h1>
+    <p>A quiet week by the lake when the birches turn gold</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="register.html" class="current">Register</a>
+  </nav>
+
+  <main>
+    <h2>Join the cottage community</h2>
+    <p>Register to share autumn cottage tips, photos and packing ideas with other nature lovers. Fill in all the fields below. Every field is required.</p>
+
+    <form action="https://httpbin.org/post" method="post" class="register-form">
+      <div class="field">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" autocomplete="name" required>
+      </div>
+
+      <div class="field">
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" autocomplete="email" required>
+      </div>
+
+      <div class="field">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" minlength="3" autocomplete="username" required>
+        <span class="hint">At least 3 characters</span>
+      </div>
+
+      <div class="field">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" minlength="8" autocomplete="new-password" required>
+        <span class="hint">At least 8 characters</span>
+      </div>
+
+      <div class="field">
+        <label for="usertype">User type</label>
+        <select id="usertype" name="usertype" required>
+          <option value="">Choose your user type</option>
+          <option value="cottage-owner">Cottage owner</option>
+          <option value="holiday-guest">Holiday guest</option>
+          <option value="day-visitor">Day visitor</option>
+          <option value="nature-photographer">Nature photographer</option>
+        </select>
+      </div>
+
+      <div class="terms">
+        <h3>Terms of use</h3>
+        <p>By registering you agree to treat the cottage community and the nature around it with respect, to share only your own photos and tips, and to keep other members' information private. This is a course project, so no real accounts are created.</p>
+      </div>
+
+      <div class="field checkbox-field">
+        <input type="checkbox" id="terms" name="terms" value="accepted" required>
+        <label for="terms">I accept the Terms of Use</label>
+      </div>
+
+      <button type="submit">Register</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>Created by Your Name &middot; Web Design course, assignment A5</p>
+  </footer>
+</body>
+</html>
